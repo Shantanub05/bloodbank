@@ -33,7 +33,7 @@
     "tailwindcss": "^2.2.10"
   },
   "scripts": {
-       "start": "react-scripts start --host 0.0.0.0 --disableHostCheck",
+    "start": "react-scripts start --host=0.0.0.0 --configuration=dev --disableHostCheck=true",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
