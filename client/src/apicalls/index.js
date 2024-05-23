@@ -9,7 +9,7 @@ export const axiosInstance = async (method, endpoint, payload) => {
 
     const response = await axios({
       method,
-      url: `https://bloodbank-d7gk.onrender.com${endpoint}`, // Update the URL here
+      url: `https://bloodbank-d7gk.onrender.com/${endpoint}`, // Update the URL here
       data: payload,
       headers: {
         authorization: `Bearer ${token}`,
