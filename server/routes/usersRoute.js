@@ -5,6 +5,9 @@ const jwt  = require("jsonwebtoken");
 const authMiddleware = require('../middlewares/authMiddleware');
 const Inventory = require("../models/inventoryModal")
 const mongoose = require("mongoose");
+const Joi = require("joi");
+const arraySchema = Joi.array();
+
 const { unique } = require('joi/lib/types/array');
 
 //register new user

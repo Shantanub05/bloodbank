@@ -1,20 +1,20 @@
-const express = require('express');
+const express = require("express");
 const app = express();
+require("dotenv").config();
 
 const port = process.env.PORT || 5000;
-require('dotenv').config({ path: '../.env'});
-const dbConfig = require('./config/dbConfig');
+const dbConfig = require("./config/dbConfig"); // Ensure this path is correct
 
-//to make use of userRoutes
+// Middleware and routes setup
 app.use(express.json());
-const usersRoute = require("./routes/usersRoute") //entry point in the server 
-const inventoryRoute = require('./routes/inventoryRoute')
-const dashboardRoute = require("./routes/dashboardRoute")
-app.use('/api/users', usersRoute)
-app.use('/api/inventory', inventoryRoute)
-app.use('/api/dashboard', dashboardRoute)
+const usersRoute = require("./routes/usersRoute");
+const inventoryRoute = require("./routes/inventoryRoute");
+const dashboardRoute = require("./routes/dashboardRoute");
+
+app.use("/api/users", usersRoute);
+app.use("/api/inventory", inventoryRoute);
+app.use("/api/dashboard", dashboardRoute);
 
 app.listen(port, () => {
-    console.log(`running on port ${port}`)
-})
-//update this 
+  console.log(`Running on port ${port}`);
+});
